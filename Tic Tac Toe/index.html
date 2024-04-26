@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Football Tic Tac Toe</h1>
+    <!-- Place this where you want the timer to appear -->
+    <div id="timer-container">
+        Turn: <span id="current-player-name"></span>
+        <p>Time left: <span id="timer">30</span> seconds</p>
+    </div>
+    <div id="player-inputs">
+        <input type="text" id="player1" placeholder="Enter Player 1 Name">
+        <input type="text" id="player2" placeholder="Enter Player 2 Name">
+    </div>
+    <div id="team-inputs">
+        <!-- Inputs for team images for columns -->
+        <input type="file" id="team1" accept="image/*">
+        
+        <input type="file" id="team2" accept="image/*">
+        <input type="file" id="team3" accept="image/*">
+        <!-- Inputs for team images for rows -->
+        <input type="file" id="team4" accept="image/*">
+        <input type="file" id="team5" accept="image/*" >
+        <input type="file" id="team6" accept="image/*" >
+    </div>
+    <button id="generateButton">Start Game</button>
+    <button id="restartButton" onclick="resetGame()">Restart Game</button>
+
+    <div id="game-info" style="display: none;">
+        <p id="current-turn">Turn: <span id="current-player-name"></span></p>
+    </div>
+    <div id="tic-tac-toe-board">
+        <div class="header-row">
+            <div class="header-cell"></div>
+            <div class="header-cell" id="column1-header"></div>
+            <div class="header-cell" id="column2-header"></div>
+            <div class="header-cell" id="column3-header"></div>
+        </div>
+        <div class="board-row">
+            <div class="header-cell" id="row1-header"></div>
+            <div class="board-cell" data-cell></div>
+            <div class="board-cell" data-cell></div>
+            <div class="board-cell" data-cell></div>
+        </div>
+        <div class="board-row">
+            <div class="header-cell" id="row2-header"></div>
+            <div class="board-cell" data-cell></div>
+            <div class="board-cell" data-cell></div>
+            <div class="board-cell" data-cell></div>
+        </div>
+        <div class="board-row">
+            <div class="header-cell" id="row3-header"></div>
+            <div class="board-cell" data-cell></div>
+            <div class="board-cell" data-cell></div>
+            <div class="board-cell" data-cell></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
